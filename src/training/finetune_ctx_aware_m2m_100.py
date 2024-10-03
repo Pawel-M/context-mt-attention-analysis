@@ -129,12 +129,11 @@ parser.add_argument("--model-path", default="facebook/nllb-200-distilled-600M", 
                     help='path to the model to be fine-tuned')
 parser.add_argument("--tokenizer-path", default=None, type=str,
                     help='path to the tokenizer to be used (if different from the model)')
-parser.add_argument("--model-name", default=None, type=str,
-                    help='name of the model to be fine-tuned')
+# parser.add_argument("--model-name", default="nllb-200-distilled-600M", type=str,
+#                     help='name of the model to be fine-tuned')
 parser.add_argument("--base-data-dir", default='.', type=str,
-                    help='base directory to save load data')  # '../../../data/iwslt_hf'
+                    help='base directory to save load data')
 parser.add_argument("--src-lang", default='en', type=str, help='source language')
-parser.add_argument("--tgt-lang", default='de', type=str, help='target language')
 parser.add_argument("--tgt-langs", default='de', type=str, nargs='+', help='target languages')
 parser.add_argument("--src-ctx-size", default=0, type=int, help='size of the source side')
 parser.add_argument("--tgt-ctx-size", default=0, type=int, help='size of the target side')
