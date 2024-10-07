@@ -129,8 +129,6 @@ The scripts below evaluate the context-aware fine-tuned models.
 Provide the path to the model and the tokenizer through the ```--model-path``` and ```--tokenizer-path``` parameters.
 
 ```shell
-
-```shell
 PYTHONPATH=path/to/repo/src/ python -m evaluating.opus_mt_contrapro \
     --results-dir . \
     --contrapro-dir path/to/repo/data/ContraPro \
@@ -239,18 +237,18 @@ PYTHONPATH=path/to/repo/src/ python -m evaluating.opus_mt_translate \
 
 ```shell
 PYTHONPATH=path/to/repo/src/ python -m evaluating.m2m_100_translate \
---model-path "facebook/nllb-200-distilled-600M" \
---tokenizer-path "facebook/nllb-200-distilled-600M" \
---model-name nllb \
---results-dir . \
---dataset ContraPro \
---base-data-dir path/to/repo/data/LCPT_trans_hf \
---raw-data-dir path/to/repo/data/LCPT \
---src-lang en \
---tgt-lang fr \
---src-ctx-size 1 \
---tgt-ctx-size 1 \
---max-length 200
+    --model-path "facebook/nllb-200-distilled-600M" \
+    --tokenizer-path "facebook/nllb-200-distilled-600M" \
+    --model-name nllb \
+    --results-dir . \
+    --dataset ContraPro \
+    --base-data-dir path/to/repo/data/LCPT_trans_hf \
+    --raw-data-dir path/to/repo/data/LCPT \
+    --src-lang en \
+    --tgt-lang fr \
+    --src-ctx-size 1 \
+    --tgt-ctx-size 1 \
+    --max-length 200
 ```
 
 ### Sentence-level NLLB-600M on IWSLT 2017 en-de validation split
