@@ -203,7 +203,7 @@ if __name__ == '__main__':
     #                     help='match the sampled size of the source and target context')
     parser.add_argument("--beam-size", default=5, type=int, help='beam size for generating translations')
     parser.add_argument("--max-length", default=200, type=int, help='maximum length of the sentences')
-    parser.add_argument("--batch-size", default=12, type=int)
+    # parser.add_argument("--batch-size", default=1, type=int)
     parser.add_argument("--no-sep-token", action='store_true', default=False,
                         help="if set, doesn't add the separator token")
 
@@ -250,4 +250,4 @@ if __name__ == '__main__':
                                        results_dir,
                                        dataset_splits=args.dataset_splits,
                                        results_suffix=args.results_suffix,
-                                       batch_size=args.batch_size)
+                                       batch_size=1)
