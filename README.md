@@ -41,7 +41,7 @@ PYTHONPATH=path/to/repo/src/ python -m training.finetune_ctx_aware_opus_mt \
     --sample-ctx-size \
     --match-ctx-size \
     --max-length 200 \
-    --learning-rate 5e-5 \
+    --learning-rate 1e-5 \
     --weight-decay 1e-2 \
     --warmup-ratio 0.0 \
     --per-device-train-batch-size 32 \
@@ -63,7 +63,7 @@ PYTHONPATH=path/to/repo/src/ python -m training.finetune_ctx_aware_m2m_100 \
     --sample-ctx-size \
     --match-ctx-size \
     --max-length 200 \
-    --learning-rate 5e-5 \
+    --learning-rate 1e-5 \
     --weight-decay 1e-2 \
     --warmup-ratio 0.0 \
     --per-device-train-batch-size 8 \
